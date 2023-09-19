@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 6</title>
+    <link href="../style.css" rel="stylesheet">
+    <style>
+        .botoes {
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            grid-template-rows: repeat(5, auto);
+            grid-column-gap: 14px;
+            grid-row-gap: 10px;
+            width: 282px;
+            height: 290px;
+            background-color: gray;
+            outline: 1px solid black;
+            padding: 20px;
+        }
+
+        .resultado {
+            grid-column: span 4;
+            text-align: right !important;
+        }
+
+        .botoes > div {
+            background-color: white;
+            text-align: center;
+            padding: 12px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="botoes">
+        <div class="resultado"> 0 </div>
+        <div> 7 </div>
+        <div> 8 </div>
+        <div> 9 </div>
+        <div> / </div>
+        <div> 4 </div>
+        <div> 5 </div>
+        <div> 6 </div>
+        <div> * </div>
+        <div> 1 </div>
+        <div> 2 </div>
+        <div> 3 </div>
+        <div> - </div>
+        <div> 0 </div>
+        <div> . </div>
+        <div> = </div>
+        <div> + </div>
+    </div>
+</body>
+</html>

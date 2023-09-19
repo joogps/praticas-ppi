@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 4</title>
+    <style>
+        .area1 { grid-area: area1; }
+        .area2 { grid-area: area2; }
+        .area3 { grid-area: area3; }
+        .area4 { grid-area: area4; }
+        .area5 { grid-area: area5; }
+        .area6 { grid-area: area6; }
+        .area7 { grid-area: area7; }
+        .area8 { grid-area: area8; }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                'area1 area1 area2 area2 area3 area4 area5 area6'
+                'area7 area7 area8 area8 area8 area4 area5 area6'
+                'area7 area7 area8 area8 area8 area4 area5 area6';
+            grid-template-columns: 14% 14% 14% 14% 14% 16% 10% 2%;
+            gap: 10px;
+            padding: 10px;
+            height: 100%;
+        }
+
+        .grid-container > div {
+            background-color: blue;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 30px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="area1">Area 1</div>
+        <div class="area2">Area 2</div>
+        <div class="area3">Area 3</div>
+        <div class="area4">Area 4</div>
+        <div class="area5">Area 5</div>
+        <div class="area6">Area 6</div>
+        <div class="area7">Area 7</div>
+        <div class="area8">Area 8</div>
+      </div>
+</body>
+</html>

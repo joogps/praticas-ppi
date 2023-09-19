@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .flag {
+            width: 200px;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+        }
+
+        .japan {
+            background-color: white;
+            border: 1px solid black;
+        }
+
+        .circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: red;
+        }
+
+        .holland {
+            flex-direction: column;
+            background-color: #21468B;
+        }
+
+        .italy {
+            background-color: #009246;
+            flex-direction: row;
+        }
+
+        .stripe-horizontal {
+            width: 100%;
+            height: 33.33%;
+        }
+
+        .stripe-vertical {
+            width: 33.33%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="flag japan">
+        <div class="circle"></div>
+    </div>
+    <div class="flag holland">
+        <div class="stripe-horizontal" style="background-color: red;"></div>
+        <div class="stripe-horizontal" style="background-color: white;"></div>
+        <div class="stripe-horizontal" style="background-color: blue;"></div>
+    </div>
+    <div class="flag italy">
+        <div class="stripe-vertical" style="background-color: green;"></div>
+        <div class="stripe-vertical" style="background-color: white;"></div>
+        <div class="stripe-vertical" style="background-color: red;"></div>
+    </div>
+</body>
+</html>
