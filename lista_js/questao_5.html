@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 5</title>
+    <link href="../style.css" rel="stylesheet">
+    <style>
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #numero1, #numero2 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <input type="number" id="numero1" placeholder="Digite o número 1...">
+        <input type="number" id="numero2" placeholder="Digite o número 2...">
+        <button id="botao"> Somar </button>
+    </div>
+
+    <script>
+        let botao = document.getElementById("botao");
+        
+        botao.addEventListener("click", function() {
+            let numero1 = document.getElementById("numero1").value;
+            let numero2 = document.getElementById("numero2").value;
+
+            let soma = parseInt(numero1) + parseInt(numero2);
+
+            alert("A soma dos números é: " + soma);
+        });
+    </script>
+</body>
+</html>

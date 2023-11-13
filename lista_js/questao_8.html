@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 8</title>
+    <link href="../style.css" rel="stylesheet">
+    <style>
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            grid-gap: 12px;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #saida {
+          margin-top: 20px;
+          font-weight: bold;
+        }
+      </style>
+    </head>
+    <body>
+        <div id="container">
+        <input type="number" id="numero" placeholder="Digite um número...">
+        
+        <div>
+        <button id="botao-fatorial">Calcular Fatorial</button>
+        <button id="botao-fibonacci">Calcular Fibonacci</button>
+        </div>
+        
+        <div id="saida"></div>
+        </div>
+    
+      <script>
+        let botaoFatorial = document.getElementById("botao-fatorial");
+        let botaoFibonacci = document.getElementById("botao-fibonacci");
+        
+        botaoFatorial.addEventListener("click", function() {
+            var numero = document.getElementById('numero').value;
+            var resultado = fatorial(numero);
+            exibir(resultado);
+        });
+
+        botaoFibonacci.addEventListener("click", function() {
+            var numero = document.getElementById('numero').value;
+            var resultado = fibonacci(numero);
+            exibir(resultado);
+        });
+    
+        function fatorial(n) {
+          if (n === 0 || n === 1) {
+            return 1;
+          } else {
+            return n * fatorial(n - 1);
+          }
+        }
+    
+        function fibonacci(n) {
+          if (n <= 1) {
+            return n;
+          } else {
+            return fibonacci(n - 1) + fibonacci(n - 2);
+          }
+        }
+    
+        function exibir(resultado) {
+          var saida = document.getElementById('saida');
+          saida.innerText = 'Resultado: ' + resultado;
+        }
+      </script>
+    </body>
+</html>
+    

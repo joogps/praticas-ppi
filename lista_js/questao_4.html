@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 4</title>
+    <link href="../style.css" rel="stylesheet">
+    <style>
+        #botao {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <button id="botao"> Clique aqui </button>
+
+    <script>
+        let botao = document.getElementById("botao");
+        let contador = 0;
+
+        botao.addEventListener("click", function() {
+            contador++;
+            vezes = "vezes";
+
+            if (contador == 1) {
+                vezes = "vez";
+            }
+
+            botao.innerHTML = "O botão foi clicado " + contador + " " + vezes+ ".";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 7</title>
+    <link href="../style.css" rel="stylesheet">
+
+    <style>
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            position: absolute;
+            left: 50%;
+            top: 48px;
+            transform: translate(-50%, 0);
+        }
+
+        .nota {
+            margin: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="criar-nota">
+            <input id="texto" placeholder="Digite aqui...">
+            <button id="botao"> Criar </button>
+        </div>
+    </div>
+
+    <script>
+        let botao = document.getElementById("botao");
+        let texto = document.getElementById("texto");
+
+        botao.addEventListener("click", function() {
+            let nota = document.createElement("div");
+            nota.classList.add("nota");
+            nota.innerHTML = texto.value;
+            document.getElementById("container").appendChild(nota);
+        });
+    </script>
+</body>
+</html>
